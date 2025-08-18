@@ -4,8 +4,10 @@
     padding: 0%;
     box-sizing: border-box;
 
-    /* FONTE GOOGLE */
-    font-family: "Press Start 2P", system-ui;
+
+/* FONTE GOOGLE */
+    
+    font-family: "Righteous", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -34,20 +36,20 @@ body{
 }
 h2.titulo{
     color: #fff;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;   
 }
 h2.titulo span{
     color: #ff7514;
 }
-button:hover, form .btn_enviar input:hover{
+button:hover, form .btn-enviar input:hover{
     box-shadow: 0px 0px 10px #ff755f;
     transform: scale(1.05);
 }
 
 /* ESTILO CABEÇALHO */
 header{
-    padding: 40PX 4%;
+    padding: 40px 4%;
 }
 
 header > .interface{
@@ -57,7 +59,7 @@ header > .interface{
 }
 
 a{
-    color: #838383;
+    color: #ffffffad;
     text-decoration: none;
     display: inline-block;
     transition: .2s;
@@ -77,7 +79,7 @@ header nav ul li{
 }
 
 .btn-contato button:hover{
-    box-shadow: 0px 0px 0px  #ff755f;
+    box-shadow: 0px 0px 0px  #ff6a00;
     transform: scale(1.05);
 }
 
@@ -85,15 +87,15 @@ header nav ul li{
 section.topo-do-site{
     padding: 40px 4%;
 }
-section.topo-do-site{
+section.topo-do-site .flex{
     align-items: center;
     justify-content: center;
     gap: 90px;
 }
 .topo-do-site h1{
     color: #fff;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 50px;
+    line-height: 50px;
 }
 .topo-do-site .txt-topo-site h1 span{
     color: #ff7514;
@@ -112,7 +114,7 @@ section.topo-do-site{
         top: 0;
     }
     100%{
-        top: 30px;
+        top: 50px;
     }
 }
 
@@ -167,7 +169,7 @@ section.sobre .flex{
     margin: 30px 0;
     text-align: justify;
 }
-.sobre .txt-sobre .btn-social button{
+.btn-social button{
     width: 60px;
     height: 60px;
     border-radius: 60px;
@@ -196,6 +198,7 @@ section.portfolio .flex{
     transition: 8s;
     cursor: pointer;
     border-radius: 40px;
+    position: relative;
 }
 
 .portfolio .img-port:hover{
@@ -230,8 +233,9 @@ section.portfolio .flex{
     font-size: 18px;
  }
 
-form .textarea{
+form textarea{
     resize: none;
+    max-height: 200px
 }
 
 form .btn-enviar{
@@ -245,4 +249,112 @@ form .btn-enviar input{
     font-weight: 700;
     cursor: pointer;
     transition: .2s;
+}
+
+/*ESTILO DO RODA PÉ*/
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+ }
+
+footer .flex{
+    justify-content: space-between;
+    gap: 10px;
+}
+footer .line-footer {
+    padding: 20px 0;
+}
+.borda{
+    border-top:2px solid #ff7514 ;
+}
+footer .line-footer p i{
+    color: #ff7514;
+    font-size: 30px;
+}
+footer .line-footer p a{
+    color: #fff;
+}
+footer .line-footer.borda {
+    text-align: center; 
+    padding: 20px 0;    
+}
+
+footer .line-footer.borda p {
+    margin: 0;         
+}
+
+@media screen and (max-width: 1020px){
+
+    /*classe geral*/
+    .flex{
+        flex-direction: column;
+    }
+
+    h2.titulo{
+        font-size: 35px;
+        line-height: 30px;  
+    }
+
+    /*cabeçalho*/
+    .menu_desktop, .btn-contato{
+        display: none;
+    }
+    
+    /*topo do site*/
+    section.topo-do-site .flex{
+        gap: 40px;
+    }
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+    .topo-do-site h1{
+        font-size: 30px; 
+    }
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+
+    /*especialidade*/
+    section.especiliadades{
+        padding: 40px 8%;
+    }
+
+    /*sobre*/
+    section.sobre{
+        padding: 80px 4%;
+    }
+    .sobre .txt-sobre h2{
+        font-size: 35px;
+        line-break: 35px;
+        text-align: center;
+    }
+    .btn-social{
+        text-align: center;
+    }
+    .img-sobre img{
+        width: 100%;
+    }
+
+    /*portifolio*/
+    section.portfolio{
+        padding: 80px 8%;
+    }
+    .img-port{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    section.portfolio .flex{
+        gap: 60px;
+        
+    }
+
+    /*Rodapé*/
+    footer .flex{
+        flex-direction: column;
+        gap: 30px;
+    }
+    footer .line-footer {
+        text-align: center;
+    }
 }
