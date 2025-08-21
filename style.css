@@ -83,59 +83,6 @@ header nav ul li{
     transform: scale(1.05);
 }
 
-/* ESTILO DO MENU MOBILE */
-.btn-abrir-menu i{
-    color: #ff6a00;
-    font-size: 40px;
-}
-.menu-mobile{
-    background-color: #000;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99999;
-    width: 0%;
-    overflow: hidden;
-    transition: .5s;
-}
-.menu-mobile.btn-abrir-menu{
-    width: 70%;
-}
-.menu-mobile.btn-abrir-menu ~ .overley-menu{
-    display: block;
-}
-.menu-mobile .btn-fechar{
-    padding: 20px 5%;
-}
-.menu-mobile nav ul li a:hover{
-    background-color: #ff6a00;
-    color: #000;
-}
-.menu-mobile .btn-fechar{
-    color: #ff6a00;
-    font-size: 30px;
-}
-.menu-mobile nav ul{
-    text-align: right;
-}
-.menu-mobile nav ul li a{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 300;
-    padding: 20px 8%;
-    display: block;
-}
-.overley-menu{
-    background-color: #000000a6;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 88888;
-    display: none;
-}
 /* ESTILO DO TOPO DO SITE */
 section.topo-do-site{
     padding: 40px 4%;
@@ -352,7 +299,60 @@ footer .line-footer.borda p {
     .menu_desktop, .btn-contato{
         display: none;
     }
-    
+    /* ESTILO DO MENU MOBILE */
+    .btn-abrir-menu i{
+        color: #ff6a00;
+        font-size: 40px;
+        display: block;
+    }
+    .menu-mobile{
+        background-color: #000;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        width: 0%;
+        overflow: hidden;
+        transition: .5s;
+    }
+    .menu-mobile.abrir-menu{
+        width: 70%;
+    }
+    .menu-mobile.abrir-menu ~ .overlay-menu{
+        display: block;
+    }
+    .menu-mobile .btn-fechar{
+        padding: 20px 5%;
+    }
+    .menu-mobile nav ul li a:hover{
+        background-color: #ff6a00;
+        color: #000;
+    }
+    .menu-mobile .btn-fechar{
+        color: #ff6a00;
+        font-size: 30px;
+    }
+    .menu-mobile nav ul{
+        text-align: right;
+    }
+    .menu-mobile nav ul li a{
+        color: #fff;
+        font-size: 20px;
+        font-weight: 300;
+        padding: 20px 8%;
+        display: block;
+    }
+    .overlay-menu{
+        background-color: #000000a6;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 88888;
+        display: none;
+    }
     /*topo do site*/
     section.topo-do-site .flex{
         gap: 40px;
