@@ -1,413 +1,200 @@
-/*ESTILO GERAL*/
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTE GOOGLE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!-- FIM -->
+    <!--ICONES-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!--FIM ICONES-->
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
+    <title>OTAVIO_AUGUSTO</title>
+</head>
+<body>
 
+    <HEader>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="logo.png" alt="logo do portifolio">
+                </a>
+            </div><!-- LOGO -->
 
-/* FONTE GOOGLE */
+            <nav class="menu_desktop">
+                <ul>
+                    <li> <a href="$">Início</a></li>
+                    <li> <a href="$">Especialidade</a></li>
+                    <li> <a href="$">Sobre</a></li>
+                    <li> <a href="$">Projetos</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+                <a href="#">
+                    <button>Contato</button>
+                </a>
+            </div><!-- Botão Contato -->
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div><!--btn-abrir-menu-->  
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                    <nav>
+                        <ul>
+                            <li> <a href="#">Início</a></li>
+                            <li> <a href="#">Especialidade</a></li>
+                            <li> <a href="#">Sobre</a></li>
+                            <li> <a href="#">Projetos</a></li>
+                            <li> <a href="#">Contato</a></li>
+                        </ul>
+                    </nav>
+
+            </div><!--MENU MOBILE-->
+            <div class="overley-menu" id="overley-menu"></div>
+        </div><!-- INTERFACE -->
+    </HEader>
     
-    font-family: "Righteous", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
+    <main>
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>TRANSFORMANDO IDEIAS EM REALIDADE<span>.</span></h1>
+                        <p>Originalidade e tecnologia caminham juntas. Com um equilíbrio perfeito entre design marcante, usabilidade prática e estratégias eficientes, 
+                        estou preparado para transformar suas ideias em uma presença digital inesquecível.</p>
 
-body{
-    background-color: #000;
-    height: 100vh;
-}
+                        <div class="btn-contato">
+                            <a href="#">
+                                <button>Entre em Contato</button>
+                            </a>
+                        </div>
+                    </div><!-- txt-topo -->
 
-.interface{
-    max-width: 1280px;
-    margin: auto;
-}
-.flex{
-    display: flex;
-}
-.btn-contato button{ 
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: #ff7514;
-    border: 0;
-    border-radius: 30px;
-    cursor: pointer;
-    transition:.2s;
-}
-h2.titulo{
-    color: #fff;
-    font-size: 40px;
-    text-align: center;   
-}
-h2.titulo span{
-    color: #ff7514;
-}
-button:hover, form .btn-enviar input:hover{
-    box-shadow: 0px 0px 10px #ff755f;
-    transform: scale(1.05);
-}
+                    <div class="img-topo-site">
+                        <img src="pessoa.png" alt="OTAVIO_AUGUSTO">
+                    </div>
 
-/* ESTILO CABEÇALHO */
-header{
-    padding: 40px 4%;
-}
+                </div><!-- flex -->
+            </div><!--- INTERFACE -->
+        </section><!-- TOPO DO SITE -->
 
-header > .interface{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+        <section class="especiliadades">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+                <div class="flex">
 
-a{
-    color: #ffffffad;
-    text-decoration: none;
-    display: inline-block;
-    transition: .2s;
-}
-header nav.menu_desktop a:hover{
-    color: #fff;
-    transform: scale(1.05);
-}
+                    <div class="especialidades-box">
+                        <i class="bi bi-file-earmark-code"></i>
+                        <h3>WebSite</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        fuga amet id nisi optio rerum odit sed deserunt?</p>
+                    </div><!--especialidades-box-->
 
-header nav.menu_desktop ul{
-    list-style: none;
-}
+                    <div class="especialidades-box">
+                        <i class="bi bi-cart3"></i>
+                        <h3>Loja Online</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        fuga amet id nisi optio rerum odit sed deserunt?</p>
+                    </div><!--especialidades-box-->
 
-header nav ul li{
-    display: inline-block;
-    padding: 0 40px;
-}
+                    <div class="especialidades-box">
+                        <i class="bi bi-joystick"></i>
+                        <h3>Games</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        fuga amet id nisi optio rerum odit sed deserunt?</p>
+                    </div><!--especialidades-box-->
 
-.btn-contato button:hover{
-    box-shadow: 0px 0px 0px  #ff6a00;
-    transform: scale(1.05);
-}
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!-- especiliadades -->
 
-/* ESTILO DO MENU MOBILE */
-.btn-abrir-menu i{
-    color: #ff6a00;
-    font-size: 40px;
-}
-.menu-mobile{
-    background-color: #000;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99999;
-    width: 0%;
-    overflow: hidden;
-    transition: .5s;
-}
-.menu-mobile.btn-abrir-menu{
-    width: 70%;
-}
-.menu-mobile.btn-abrir-menu ~ .overley-menu{
-    display: block;
-}
-.menu-mobile .btn-fechar{
-    padding: 20px 5%;
-}
-.menu-mobile nav ul li a:hover{
-    background-color: #ff6a00;
-    color: #000;
-}
-.menu-mobile .btn-fechar{
-    color: #ff6a00;
-    font-size: 30px;
-}
-.menu-mobile nav ul{
-    text-align: right;
-}
-.menu-mobile nav ul li a{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 300;
-    padding: 20px 8%;
-    display: block;
-}
-.overley-menu{
-    background-color: #000000a6;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 88888;
-    display: none;
-}
-/* ESTILO DO TOPO DO SITE */
-section.topo-do-site{
-    padding: 40px 4%;
-}
-section.topo-do-site .flex{
-    align-items: center;
-    justify-content: center;
-    gap: 90px;
-}
-.topo-do-site h1{
-    color: #fff;
-    font-size: 50px;
-    line-height: 50px;
-}
-.topo-do-site .txt-topo-site h1 span{
-    color: #ff7514;
-}
-.topo-do-site .txt-topo-site p{
-    color: #fff;
-    margin: 40px 0;
-}
-.topo-do-site .img-topo-site img{
-    position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
-}
+        <section class="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="foto.png" alt="foto">
+                    </div><!-- img-sobre -->
 
-@keyframes flutuar {
-    0%{
-        top: 0;
-    }
-    100%{
-        top: 50px;
-    }
-}
+                    <div class="txt-sobre">
+                        <h2>MUITO PRAZER, <span>SOU OTAVIO AUGUSTO.</span></h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Culpa soluta totam commodi, minima voluptatibus nemo rerum nisi.
+                        Culpa soluta totam commodi, minima voluptatibus nemo rerum nisi.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit facilis 
+                        Culpa soluta totam commodi, minima voluptatibus nemo rerum nisi.
+                        temporibus, atque mollitia repellat culpa consequuntur dolorem deserunt? </p>
+                        <div class="btn-social">
+                            <a href="https://www.instagram.com/otavio_augusto_93/profilecard/?igsh=b2VyY3FnaXpjMjk0"><BUtton><i class="bi bi-instagram"></i></BUtton></a>
+                            <a href="https://www.linkedin.com/in/ot%C3%A1vio-augusto-8691b5231/"><BUtton><i class="bi bi-linkedin"></i></BUtton></a>
+                            <a href="https://github.com/OTAVIOCAMISA10"><BUtton><i class="bi bi-github"></i></BUtton></a>
+                        </div><!-- btn-social -->
+                    </div><!-- txt-sobre -->
+                    
+                </div><!-- flex -->
+            </div><!-- INTERFACE -->
+        </section><!-- FIM SOBRE -->
 
-/* ESTILO ESPECILIADADES */
-section.especiliadades{
-    padding: 40px 4%;
-}
-section.especiliadades .flex{
-    gap: 60px;
-}
-.especiliadades .especialidades-box{
-    color: #fff ;
-    padding: 45px;
-    border-radius: 25px;
-    margin-top: 45px;
-    transition: .2s;
-}
-.especiliadades .especialidades-box:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 30px #ffffff6c;
-}
-.especiliadades .especialidades-box i{
-    font-size: 70px;
-    color: #ff7514;
-}
-.especiliadades .especialidades-box h3{
-    font-size: 28px;
-    margin: 15px 0;
-}
+        <section class="portfolio">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>PORTIFOLIO.</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url(Imagem/Imagem.jpg);"></div>
+                    <div class="img-port" style="background-image: url(Imagem/Imagem.jpg);"></div>
+                    <div class="img-port" style="background-image: url(Imagem/Imagem.jpg);"></div>
 
-/* ESTILO SOBRE*/
-section.sobre{
-    padding: 80px 4%;
-}
-section.sobre .flex{
-    align-items: center;
-    gap: 60px;
-}
-.sobre .txt-sobre{
-    color: #fff;
-}
-.sobre .txt-sobre h2{
-    font-size: 40px;
-    line-break: 40px;
-    margin-bottom: 30px;
-}
-.sobre .txt-sobre h2 span{
-    color: #ff7514;
-    display: block;
-}
-.sobre .txt-sobre p{
-    margin: 30px 0;
-    text-align: justify;
-}
-.btn-social button{
-    width: 60px;
-    height: 60px;
-    border-radius: 60px;
-    border: 0;
-    background-color: #ff7514;
-    font-size: 25px;
-    cursor: pointer;
-    margin: 0 5px;
-    transition: .2s;
-}
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--portifolio-->
 
-/* ESTILO DO PORTIFOLIO */
-section.portfolio{
-    padding: 80px 4%;
-    box-shadow: 0 0 40px 10px #ffffff1d;
-}
-section.portfolio .flex{
-    justify-content: space-around;
-    margin-top: 60px;
-}
-.img-port{
-    width: 360px;
-    height: 460px;
-    background-size: cover;
-    background-position: 100% 0%;
-    transition: 8s;
-    cursor: pointer;
-    border-radius: 40px;
-    position: relative;
-}
+        <section class="formulario">
+            <div class="interface">
+                <h2 class="titulo">FALA <span>COMIGO.</span></h2>
 
-.portfolio .img-port:hover{
-    background-position: 100% 100%;
-    transform: scale(1.10);
-    box-shadow: 0 0 30px #ffffff6c;
-}
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Nome Completo:" required>
+                    <input type="text" name="" id="" placeholder="E-mail:" required>
+                    <input type="text" name="" id="" placeholder="Celular:">
 
- /* ESTILO FORMULARIO */
- section.formulario{
-    padding: 80px 4%;  
- }
+                    <textarea name="" id="" placeholder="Sua Mensagem:" required></textarea>
 
- form{
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 40px;
- }
+                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
 
- form input, form textarea{
-    width: 100%;
-    background-color: #3f3f3f;
-    border: 0;
-    outline: 0;
-    padding: 20px 15px;
-    border-radius: 15px;
-    color: #ffffff;
-    font-size: 18px;
- }
+                </form>
 
-form textarea{
-    resize: none;
-    max-height: 200px
-}
-
-form .btn-enviar{
-    margin-top: 20px;
-    text-align: center;
-}
-form .btn-enviar input{
-    width: 200px;
-    background-color: #ff7514;
-    color: #000;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .2s;
-}
-
-/*ESTILO DO RODA PÉ*/
-footer{
-    padding: 40px 4%;
-    box-shadow: 0 0 40px 10px #ffffff1d;
- }
-
-footer .flex{
-    justify-content: space-between;
-    gap: 10px;
-}
-footer .line-footer {
-    padding: 20px 0;
-}
-.borda{
-    border-top:2px solid #ff7514 ;
-}
-footer .line-footer p i{
-    color: #ff7514;
-    font-size: 30px;
-}
-footer .line-footer p a{
-    color: #fff;
-}
-footer .line-footer.borda {
-    text-align: center; 
-    padding: 20px 0;    
-}
-
-footer .line-footer.borda p {
-    margin: 0;         
-}
-
-@media screen and (max-width: 1020px){
-
-    /*classe geral*/
-    .flex{
-        flex-direction: column;
-    }
-
-    h2.titulo{
-        font-size: 35px;
-        line-height: 30px;  
-    }
-
-    /*cabeçalho*/
-    .menu_desktop, .btn-contato{
-        display: none;
-    }
-    
-    /*topo do site*/
-    section.topo-do-site .flex{
-        gap: 40px;
-    }
-    section.topo-do-site{
-        padding: 20px 8%;
-    }
-    .topo-do-site h1{
-        font-size: 30px; 
-    }
-    .topo-do-site .img-topo-site img{
-        width: 100%;
-    }
-
-    /*especialidade*/
-    section.especiliadades{
-        padding: 40px 8%;
-    }
-
-    /*sobre*/
-    section.sobre{
-        padding: 80px 4%;
-    }
-    .sobre .txt-sobre h2{
-        font-size: 35px;
-        line-break: 35px;
-        text-align: center;
-    }
-    .btn-social{
-        text-align: center;
-    }
-    .img-sobre img{
-        width: 100%;
-    }
-
-    /*portifolio*/
-    section.portfolio{
-        padding: 80px 8%;
-    }
-    .img-port{
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
-    }
-    section.portfolio .flex{
-        gap: 60px;
+            </div><!-- interface -->
+        </section><!-- formulario -->
         
-    }
+    </main>
 
-    /*Rodapé*/
-    footer .flex{
-        flex-direction: column;
-        gap: 30px;
-    }
-    footer .line-footer {
-        text-align: center;
-    }
-}
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                <div class="logo-footer">
+                    <img src="logo.png" alt="">
+                </div><!--logo footer-->
+                <div class="btn-social">
+                     <a href="https://www.instagram.com/otavio_augusto_93/profilecard/?igsh=b2VyY3FnaXpjMjk0"><BUtton><i class="bi bi-instagram"></i></BUtton></a>
+                     <a href="https://www.linkedin.com/in/ot%C3%A1vio-augusto-8691b5231/"><BUtton><i class="bi bi-linkedin"></i></BUtton></a>
+                     <a href="https://github.com/OTAVIOCAMISA10"><BUtton><i class="bi bi-github"></i></BUtton></a>
+                </div><!-- btn-social -->
+                </div><!-- FLEX -->
+            </div><!-- line footer 1 -->
+                
+            <div class="line-footer borda">
+                <p><i class="bi bi-mailbox-flag"></i><a href="mailto:otavioaugustoti@gmail.com">_otavioaugustoti@gmail.com </a></p>
+            </div><!-- line footer 2 -->
+        </div><!-- interface -->
+    </footer>
+
+</body>
+</html>
