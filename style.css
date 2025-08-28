@@ -4,7 +4,9 @@
     padding: 0%;
     box-sizing: border-box;
 
+
 /* FONTE GOOGLE */
+    
     font-family: "Righteous", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -43,13 +45,6 @@ h2.titulo span{
 button:hover, form .btn-enviar input:hover{
     box-shadow: 0px 0px 10px #ff755f;
     transform: scale(1.05);
-}
-
-/* ===== NOVO: esconder menu mobile no desktop ===== */
-.menu-mobile,
-.btn-abrir-menu,
-.overlay-menu{
-    display: none;
 }
 
 /* ESTILO CABEÇALHO */
@@ -272,7 +267,6 @@ footer .line-footer {
 .borda{
     border-top:2px solid #ff7514 ;
 }
-
 footer .line-footer p i{
     color: #ff7514;
     font-size: 30px;
@@ -289,7 +283,6 @@ footer .line-footer.borda p {
     margin: 0;         
 }
 
-/* ====== MOBILE ====== */
 @media screen and (max-width: 1020px){
 
     /*classe geral*/
@@ -306,18 +299,13 @@ footer .line-footer.borda p {
     .menu_desktop, .btn-contato{
         display: none;
     }
-
     /* ESTILO DO MENU MOBILE */
-    .btn-abrir-menu{
-        display: block;           /* NOVO: mostra o botão no mobile */
-    }
     .btn-abrir-menu i{
         color: #ff6a00;
         font-size: 40px;
         display: block;
     }
     .menu-mobile{
-        display: block;           /* NOVO: ativa o container no mobile */
         background-color: #000;
         height: 100vh;
         position: fixed;
@@ -365,7 +353,6 @@ footer .line-footer.borda p {
         z-index: 88888;
         display: none;
     }
-
     /*topo do site*/
     section.topo-do-site .flex{
         gap: 40px;
@@ -423,4 +410,70 @@ footer .line-footer.borda p {
     footer .line-footer {
         text-align: center;
     }
+
+    /* ===== MENU MOBILE: itens empilhados + animação no hover ===== */
+    .menu-mobile nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-mobile nav ul li {
+        display: block;               
+        margin: 5px 0;               
+        transform: translateX(0);
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .menu-mobile nav ul li a {
+        display: block;
+        padding: 15px 20px;          
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .menu-mobile nav ul li:hover {
+        transform: translateX(10px);  
+    }
+
+    .menu-mobile nav ul li a:hover {
+        background-color: #ff6a00;
+        color: #000;
+    }
+
+
+    /* ===== AJUSTE MENU MOBILE: itens empilhados no canto direito + animação ===== */
+    .menu-mobile nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;  
+        align-items: flex-end;   
+    }
+
+    .menu-mobile nav ul li {
+        margin: 5px 0;
+        transform: translateX(0);
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .menu-mobile nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        color: #fff;
+        font-size: 20px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .menu-mobile nav ul li:hover {
+        transform: translateX(-10px); 
+    }
+
+    .menu-mobile nav ul li a:hover {
+        background-color: #ff6a00;
+        color: #000;
+    }
+
 }
