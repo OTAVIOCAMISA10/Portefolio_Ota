@@ -18,3 +18,33 @@ if (btnMenu && menu && overlay) {
     menu.classList.remove('abrir-menu');
   });
 }
+// Configurar envio do formulário pelo WhatsApp
+document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+  e.preventDefault(); 
+
+  // Pegando valores digitados
+  let nome = document.getElementById("nome").value;
+  let email = document.getElementById("email").value;
+  let mensagem = document.getElementById("mensagem").value;
+
+  // Número do WhatsApp 
+  let numero = "5534998794210";
+
+  // Monta mensagem formatada
+  let texto = `Olá, meu nome é ${nome}%0A`
+            + `E-mail: ${email}%0A%0A`
+            + `Mensagem:%0A${mensagem}`;
+
+  // Abre o WhatsApp
+  window.open(`https://wa.me/${numero}?text=${texto}`, "_blank");
+});
+
+
+// Seleciona todos os textareas que precisam crescer automaticamente
+document.querySelectorAll("form textarea").forEach(textarea => {
+  textarea.addEventListener("input", function() {
+    this.style.height = "auto";     
+    this.style.height = this.scrollHeight + "px"; 
+  });
+});
+
