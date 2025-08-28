@@ -13,7 +13,7 @@
 }
 
 body{
-    background-color: #000;
+    background-color: #000000;
     height: 100vh;
 }
 
@@ -419,21 +419,21 @@ footer .line-footer.borda p {
     }
 
     .menu-mobile nav ul li {
-        display: block;               
-        margin: 5px 0;               
+        display: block;               /* um embaixo do outro */
+        margin: 5px 0;                /* espaço entre itens */
         transform: translateX(0);
         transition: transform 0.3s ease, background 0.3s ease;
     }
 
     .menu-mobile nav ul li a {
         display: block;
-        padding: 15px 20px;          
+        padding: 15px 20px;           /* override para um toque confortável */
         border-radius: 8px;
         transition: all 0.3s ease;
     }
 
     .menu-mobile nav ul li:hover {
-        transform: translateX(10px);  
+        transform: translateX(10px);  /* desliza levemente pra direita */
     }
 
     .menu-mobile nav ul li a:hover {
@@ -448,8 +448,8 @@ footer .line-footer.borda p {
         padding: 0;
         margin: 0;
         display: flex;
-        flex-direction: column;  
-        align-items: flex-end;   
+        flex-direction: column;  /* empilha */
+        align-items: flex-end;   /* no canto direito */
     }
 
     .menu-mobile nav ul li {
@@ -468,7 +468,7 @@ footer .line-footer.borda p {
     }
 
     .menu-mobile nav ul li:hover {
-        transform: translateX(-10px); 
+        transform: translateX(-10px); /* desliza levemente pra esquerda */
     }
 
     .menu-mobile nav ul li a:hover {
@@ -476,4 +476,58 @@ footer .line-footer.borda p {
         color: #000;
     }
 
+}
+
+
+/* ===== FIX: esconder menu mobile no desktop ===== */
+@media screen and (min-width: 1021px) {
+    .menu-mobile {
+        display: none !important;
+    }
+}
+
+/* ===== AJUSTE CABEÇALHO: centralizar menu desktop ===== */
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav.menu_desktop {
+    flex: 1;                  /* ocupa o espaço central */
+    display: flex;
+    justify-content: center;  /* centraliza os itens */
+}
+
+header nav.menu_desktop ul {
+    display: flex;
+    gap: 40px;                /* espaço entre links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav.menu_desktop ul li a {
+    text-align: center;
+    font-size: 18px;
+    color: #ffffffad;
+    transition: .2s;
+}
+
+header nav.menu_desktop ul li a:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* ===== FIX MOBILE HEADER: esconder nav desktop e botão contato no mobile ===== */
+@media screen and (max-width: 1020px){
+    header nav.menu_desktop { display: none !important; }
+    .btn-contato { display: none !important; }
+    .btn-abrir-menu { display: block !important; }
+
+    /* opcional: reduzir o padding do header no mobile para ocupar menos espaço */
+    header { padding: 20px 6% !important; }
+
+    /* garante alinhamento entre logo (esquerda) e hambúrguer (direita) */
+    header > .interface { justify-content: space-between !important; align-items: center !important; }
 }
